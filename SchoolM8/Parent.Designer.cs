@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            studentId = new Label();
-            dateofbird = new Label();
-            gender = new Label();
-            idNumber = new Label();
-            nameParent = new Label();
+            lbOccupation = new Label();
+            lbEmail = new Label();
+            lbPhoneNumber = new Label();
+            lbLastName = new Label();
+            lbFirstName = new Label();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -50,11 +50,11 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(studentId);
-            panel1.Controls.Add(dateofbird);
-            panel1.Controls.Add(gender);
-            panel1.Controls.Add(idNumber);
-            panel1.Controls.Add(nameParent);
+            panel1.Controls.Add(lbOccupation);
+            panel1.Controls.Add(lbEmail);
+            panel1.Controls.Add(lbPhoneNumber);
+            panel1.Controls.Add(lbLastName);
+            panel1.Controls.Add(lbFirstName);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -65,55 +65,55 @@
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
-            // studentId
+            // lbOccupation
             // 
-            studentId.AutoSize = true;
-            studentId.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            studentId.Location = new Point(225, 131);
-            studentId.Name = "studentId";
-            studentId.Size = new Size(70, 32);
-            studentId.TabIndex = 9;
-            studentId.Text = "NULL";
+            lbOccupation.AutoSize = true;
+            lbOccupation.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbOccupation.Location = new Point(225, 131);
+            lbOccupation.Name = "lbOccupation";
+            lbOccupation.Size = new Size(70, 32);
+            lbOccupation.TabIndex = 9;
+            lbOccupation.Text = "NULL";
             // 
-            // dateofbird
+            // lbEmail
             // 
-            dateofbird.AutoSize = true;
-            dateofbird.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            dateofbird.Location = new Point(225, 96);
-            dateofbird.Name = "dateofbird";
-            dateofbird.Size = new Size(70, 32);
-            dateofbird.TabIndex = 8;
-            dateofbird.Text = "NULL";
+            lbEmail.AutoSize = true;
+            lbEmail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbEmail.Location = new Point(225, 96);
+            lbEmail.Name = "lbEmail";
+            lbEmail.Size = new Size(70, 32);
+            lbEmail.TabIndex = 8;
+            lbEmail.Text = "NULL";
             // 
-            // gender
+            // lbPhoneNumber
             // 
-            gender.AutoSize = true;
-            gender.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            gender.Location = new Point(225, 64);
-            gender.Name = "gender";
-            gender.Size = new Size(70, 32);
-            gender.TabIndex = 7;
-            gender.Text = "NULL";
+            lbPhoneNumber.AutoSize = true;
+            lbPhoneNumber.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbPhoneNumber.Location = new Point(225, 64);
+            lbPhoneNumber.Name = "lbPhoneNumber";
+            lbPhoneNumber.Size = new Size(70, 32);
+            lbPhoneNumber.TabIndex = 7;
+            lbPhoneNumber.Text = "NULL";
             // 
-            // idNumber
+            // lbLastName
             // 
-            idNumber.AutoSize = true;
-            idNumber.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            idNumber.Location = new Point(225, 32);
-            idNumber.Name = "idNumber";
-            idNumber.Size = new Size(70, 32);
-            idNumber.TabIndex = 6;
-            idNumber.Text = "NULL";
+            lbLastName.AutoSize = true;
+            lbLastName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbLastName.Location = new Point(225, 32);
+            lbLastName.Name = "lbLastName";
+            lbLastName.Size = new Size(70, 32);
+            lbLastName.TabIndex = 6;
+            lbLastName.Text = "NULL";
             // 
-            // nameParent
+            // lbFirstName
             // 
-            nameParent.AutoSize = true;
-            nameParent.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            nameParent.Location = new Point(225, 0);
-            nameParent.Name = "nameParent";
-            nameParent.Size = new Size(70, 32);
-            nameParent.TabIndex = 5;
-            nameParent.Text = "NULL";
+            lbFirstName.AutoSize = true;
+            lbFirstName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbFirstName.Location = new Point(225, 0);
+            lbFirstName.Name = "lbFirstName";
+            lbFirstName.Size = new Size(70, 32);
+            lbFirstName.TabIndex = 5;
+            lbFirstName.Text = "NULL";
             // 
             // button4
             // 
@@ -177,9 +177,9 @@
             label1.ForeColor = Color.FromArgb(67, 20, 7);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(90, 32);
+            label1.Size = new Size(141, 32);
             label1.TabIndex = 0;
-            label1.Text = "Name :";
+            label1.Text = "First Name :";
             // 
             // label2
             // 
@@ -188,9 +188,9 @@
             label2.ForeColor = Color.FromArgb(67, 20, 7);
             label2.Location = new Point(3, 32);
             label2.Name = "label2";
-            label2.Size = new Size(133, 32);
+            label2.Size = new Size(138, 32);
             label2.TabIndex = 2;
-            label2.Text = "ID number:";
+            label2.Text = "Last Name :";
             // 
             // label4
             // 
@@ -199,9 +199,9 @@
             label4.ForeColor = Color.FromArgb(67, 20, 7);
             label4.Location = new Point(3, 64);
             label4.Name = "label4";
-            label4.Size = new Size(104, 32);
+            label4.Size = new Size(189, 32);
             label4.TabIndex = 6;
-            label4.Text = "Gender :";
+            label4.Text = "Phone Number :";
             // 
             // label5
             // 
@@ -210,9 +210,9 @@
             label5.ForeColor = Color.FromArgb(67, 20, 7);
             label5.Location = new Point(3, 96);
             label5.Name = "label5";
-            label5.Size = new Size(154, 32);
+            label5.Size = new Size(94, 32);
             label5.TabIndex = 8;
-            label5.Text = "Date of Bird :";
+            label5.Text = "E-Mail :";
             // 
             // label7
             // 
@@ -221,9 +221,9 @@
             label7.ForeColor = Color.FromArgb(67, 20, 7);
             label7.Location = new Point(3, 128);
             label7.Name = "label7";
-            label7.Size = new Size(143, 32);
+            label7.Size = new Size(148, 32);
             label7.TabIndex = 12;
-            label7.Text = "Student's ID";
+            label7.Text = "Occupation :";
             // 
             // button1
             // 
@@ -262,10 +262,10 @@
         private Label label5;
         private Label label7;
         private Button button1;
-        private Label nameParent;
-        private Label studentId;
-        private Label dateofbird;
-        private Label gender;
-        private Label idNumber;
+        private Label lbFirstName;
+        private Label lbOccupation;
+        private Label lbEmail;
+        private Label lbPhoneNumber;
+        private Label lbLastName;
     }
 }

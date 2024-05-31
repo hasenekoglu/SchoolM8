@@ -37,14 +37,16 @@
             label6 = new Label();
             label7 = new Label();
             button1 = new Button();
-            panel1 = new Panel();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
             label8 = new Label();
+            panel1 = new Panel();
+            labelEmail = new Label();
+            labelBalance = new Label();
+            labelClass = new Label();
+            labelParentName = new Label();
+            labelAddress = new Label();
+            labelDOB = new Label();
+            labelLastName = new Label();
+            labelFirstName = new Label();
             button4 = new Button();
             TimeTable = new Button();
             button2 = new Button();
@@ -62,10 +64,11 @@
             flowLayoutPanel1.Controls.Add(label6);
             flowLayoutPanel1.Controls.Add(label7);
             flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(label8);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(186, 490);
+            flowLayoutPanel1.Size = new Size(172, 490);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -76,9 +79,9 @@
             label1.ForeColor = Color.FromArgb(67, 20, 7);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(90, 32);
+            label1.Size = new Size(141, 32);
             label1.TabIndex = 0;
-            label1.Text = "Name :";
+            label1.Text = "First Name :";
             label1.Click += label1_Click_1;
             // 
             // label2
@@ -88,9 +91,9 @@
             label2.ForeColor = Color.FromArgb(67, 20, 7);
             label2.Location = new Point(3, 32);
             label2.Name = "label2";
-            label2.Size = new Size(107, 32);
+            label2.Size = new Size(138, 32);
             label2.TabIndex = 2;
-            label2.Text = "Number:";
+            label2.Text = "Last Name :";
             label2.Click += label2_Click_1;
             // 
             // label3
@@ -100,9 +103,9 @@
             label3.ForeColor = Color.FromArgb(67, 20, 7);
             label3.Location = new Point(3, 64);
             label3.Name = "label3";
-            label3.Size = new Size(79, 32);
+            label3.Size = new Size(166, 32);
             label3.TabIndex = 4;
-            label3.Text = "Class :";
+            label3.Text = "Date Of Birth :";
             // 
             // label4
             // 
@@ -111,9 +114,9 @@
             label4.ForeColor = Color.FromArgb(67, 20, 7);
             label4.Location = new Point(3, 96);
             label4.Name = "label4";
-            label4.Size = new Size(104, 32);
+            label4.Size = new Size(110, 32);
             label4.TabIndex = 6;
-            label4.Text = "Gender :";
+            label4.Text = "Address :";
             // 
             // label5
             // 
@@ -122,9 +125,9 @@
             label5.ForeColor = Color.FromArgb(67, 20, 7);
             label5.Location = new Point(3, 128);
             label5.Name = "label5";
-            label5.Size = new Size(154, 32);
+            label5.Size = new Size(164, 32);
             label5.TabIndex = 8;
-            label5.Text = "Date of Bird :";
+            label5.Text = "Parent Name :";
             // 
             // label6
             // 
@@ -133,9 +136,9 @@
             label6.ForeColor = Color.FromArgb(67, 20, 7);
             label6.Location = new Point(3, 160);
             label6.Name = "label6";
-            label6.Size = new Size(180, 32);
+            label6.Size = new Size(79, 32);
             label6.TabIndex = 10;
-            label6.Text = "Mother's Name";
+            label6.Text = "Class :";
             // 
             // label7
             // 
@@ -144,9 +147,9 @@
             label7.ForeColor = Color.FromArgb(67, 20, 7);
             label7.Location = new Point(3, 192);
             label7.Name = "label7";
-            label7.Size = new Size(167, 32);
+            label7.Size = new Size(108, 32);
             label7.TabIndex = 12;
-            label7.Text = "Father's Name";
+            label7.Text = "Balance :";
             // 
             // button1
             // 
@@ -157,15 +160,27 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 18F);
+            label8.ForeColor = Color.FromArgb(67, 20, 7);
+            label8.Location = new Point(3, 230);
+            label8.Name = "label8";
+            label8.Size = new Size(94, 32);
+            label8.TabIndex = 15;
+            label8.Text = "E-Mail :";
+            // 
             // panel1
             // 
-            panel1.Controls.Add(label14);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label8);
+            panel1.Controls.Add(labelEmail);
+            panel1.Controls.Add(labelBalance);
+            panel1.Controls.Add(labelClass);
+            panel1.Controls.Add(labelParentName);
+            panel1.Controls.Add(labelAddress);
+            panel1.Controls.Add(labelDOB);
+            panel1.Controls.Add(labelLastName);
+            panel1.Controls.Add(labelFirstName);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(TimeTable);
             panel1.Controls.Add(button2);
@@ -174,83 +189,95 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(576, 490);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
-            // label14
+            // labelEmail
             // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label14.Location = new Point(192, 195);
-            label14.Name = "label14";
-            label14.Size = new Size(70, 32);
-            label14.TabIndex = 11;
-            label14.Text = "NULL";
+            labelEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelEmail.Location = new Point(192, 230);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(70, 32);
+            labelEmail.TabIndex = 12;
+            labelEmail.Text = "NULL";
             // 
-            // label13
+            // labelBalance
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label13.Location = new Point(192, 160);
-            label13.Name = "label13";
-            label13.Size = new Size(70, 32);
-            label13.TabIndex = 10;
-            label13.Text = "NULL";
+            labelBalance.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelBalance.AutoSize = true;
+            labelBalance.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelBalance.Location = new Point(192, 195);
+            labelBalance.Name = "labelBalance";
+            labelBalance.Size = new Size(70, 32);
+            labelBalance.TabIndex = 11;
+            labelBalance.Text = "NULL";
             // 
-            // label12
+            // labelClass
             // 
-            label12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label12.Location = new Point(192, 128);
-            label12.Name = "label12";
-            label12.Size = new Size(70, 32);
-            label12.TabIndex = 9;
-            label12.Text = "NULL";
+            labelClass.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelClass.AutoSize = true;
+            labelClass.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelClass.Location = new Point(192, 160);
+            labelClass.Name = "labelClass";
+            labelClass.Size = new Size(70, 32);
+            labelClass.TabIndex = 10;
+            labelClass.Text = "NULL";
             // 
-            // label11
+            // labelParentName
             // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label11.Location = new Point(192, 96);
-            label11.Name = "label11";
-            label11.Size = new Size(70, 32);
-            label11.TabIndex = 8;
-            label11.Text = "NULL";
+            labelParentName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelParentName.AutoSize = true;
+            labelParentName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelParentName.Location = new Point(192, 128);
+            labelParentName.Name = "labelParentName";
+            labelParentName.Size = new Size(70, 32);
+            labelParentName.TabIndex = 9;
+            labelParentName.Text = "NULL";
             // 
-            // label10
+            // labelAddress
             // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label10.Location = new Point(192, 64);
-            label10.Name = "label10";
-            label10.Size = new Size(70, 32);
-            label10.TabIndex = 7;
-            label10.Text = "NULL";
+            labelAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelAddress.AutoSize = true;
+            labelAddress.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelAddress.Location = new Point(192, 96);
+            labelAddress.Name = "labelAddress";
+            labelAddress.Size = new Size(70, 32);
+            labelAddress.TabIndex = 8;
+            labelAddress.Text = "NULL";
             // 
-            // label9
+            // labelDOB
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label9.Location = new Point(192, 32);
-            label9.Name = "label9";
-            label9.Size = new Size(70, 32);
-            label9.TabIndex = 6;
-            label9.Text = "NULL";
-            label9.Click += label9_Click;
+            labelDOB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            labelDOB.AutoSize = true;
+            labelDOB.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelDOB.Location = new Point(192, 64);
+            labelDOB.Name = "labelDOB";
+            labelDOB.Size = new Size(70, 32);
+            labelDOB.TabIndex = 7;
+            labelDOB.Text = "NULL";
             // 
-            // label8
+            // labelLastName
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label8.Location = new Point(192, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 32);
-            label8.TabIndex = 5;
-            label8.Text = "NULL";
-            label8.Click += label8_Click_1;
+            labelLastName.AutoSize = true;
+            labelLastName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelLastName.Location = new Point(192, 32);
+            labelLastName.Name = "labelLastName";
+            labelLastName.Size = new Size(70, 32);
+            labelLastName.TabIndex = 6;
+            labelLastName.Text = "NULL";
+            labelLastName.Click += label9_Click;
+            // 
+            // labelFirstName
+            // 
+            labelFirstName.AutoSize = true;
+            labelFirstName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelFirstName.Location = new Point(192, 0);
+            labelFirstName.Name = "labelFirstName";
+            labelFirstName.Size = new Size(70, 32);
+            labelFirstName.TabIndex = 5;
+            labelFirstName.Text = "NULL";
+            labelFirstName.Click += label8_Click_1;
             // 
             // button4
             // 
@@ -304,6 +331,7 @@
             Controls.Add(panel1);
             Name = "Students";
             Size = new Size(661, 533);
+            Load += Students_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -326,12 +354,14 @@
         private Button TimeTable;
         private Button button2;
         private Button button4;
-        private Label label9;
+        private Label labelLastName;
+        private Label labelFirstName;
+        private Label labelBalance;
+        private Label labelClass;
+        private Label labelParentName;
+        private Label labelAddress;
+        private Label labelDOB;
         private Label label8;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
+        private Label labelEmail;
     }
 }

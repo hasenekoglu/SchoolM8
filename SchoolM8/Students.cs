@@ -49,12 +49,9 @@ namespace SchoolM8
 
         }
 
-        
 
-        private void label8_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -62,6 +59,31 @@ namespace SchoolM8
         }
 
         private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Students_Load(object sender, EventArgs e)
+        {
+            LoadStudentInfo();
+        }
+
+        private void LoadStudentInfo()
+        {
+            UserSession session = UserSession.Instance;
+
+            labelFirstName.Text = session.FirstName;
+            labelLastName.Text = session.LastName;
+            labelEmail.Text = session.Email;
+            labelAddress.Text = session.Address;
+            labelBalance.Text = session.Balance.ToString("C");
+            labelParentName.Text=session.ParentName;
+            labelDOB.Text = session.DateOfBirth;
+            labelClass.Text = session.StudentClass;
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

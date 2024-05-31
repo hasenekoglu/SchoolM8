@@ -26,20 +26,17 @@ namespace SchoolM8
 
         private void Parent_Load(object sender, EventArgs e)
         {
-            connect.Open();
-            SqlCommand command = new SqlCommand("select FirstName,LastName,PhoneNumber,Email from Parents",connect);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                string firstName = reader["FirstName"].ToString();
-                string lastName = reader["LastName"].ToString();
-                string phoneNumber = reader["PhoneNumber"].ToString();
-                string email = reader["Email"].ToString();
+            LoadParentInfo();
+        }
 
-                nameParent.Text = firstName;
-
-                
-            }
+        private void LoadParentInfo()
+        {
+            UserSession session = UserSession.Instance;
+            lbFirstName.Text = session.FirstName;
+            lbLastName.Text = session.LastName;
+            lbEmail.Text = session.Email;
+            lbPhoneNumber.Text = session.PhoneNumber;
+            lbOccupation.Text = session.Occupation;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

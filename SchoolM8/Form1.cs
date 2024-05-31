@@ -19,12 +19,12 @@ namespace SchoolM8
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-          
-                panel1.Controls.Clear();
-                Dashboard dashboard = new Dashboard();
-                panel1.Controls.Add(dashboard);
-           
+
+
+            panel1.Controls.Clear();
+            Dashboard dashboard = new Dashboard();
+            panel1.Controls.Add(dashboard);
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -75,7 +75,12 @@ namespace SchoolM8
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+       string firstName = UserSession.Instance.FirstName;
+       string lastName = UserSession.Instance.LastName;
+       string role = UserSession.Instance.Role;
+       labelFirstName.Text = firstName;
+       labelLastName.Text = lastName;
+       labelRole.Text = role;
         }
 
         private void panel1_Paint_2(object sender, PaintEventArgs e)
@@ -85,10 +90,11 @@ namespace SchoolM8
 
         private void btnAcademicStaff_Click(object sender, EventArgs e)
         {
-            if (UserSession.Instance.Role == "Teacher"||UserSession.Instance.Role == "Admin"){
+            if (UserSession.Instance.Role == "Teacher"||UserSession.Instance.Role == "Admin")
+            {
                 panel1.Controls.Clear();
-            AcademicStaff academicStaff = new AcademicStaff();
-            panel1.Controls.Add(academicStaff);
+                AcademicStaff academicStaff = new AcademicStaff();
+                panel1.Controls.Add(academicStaff);
 
             }
             else
@@ -111,6 +117,9 @@ namespace SchoolM8
             }
         }
 
-       
+        private void labelFirstName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

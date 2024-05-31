@@ -32,6 +32,7 @@
             button3 = new Button();
             button2 = new Button();
             panel2 = new Panel();
+            textBoxPhoneNum = new TextBox();
             textBoxSubject = new TextBox();
             textBoxLastName = new TextBox();
             textBoxFirstName = new TextBox();
@@ -43,7 +44,6 @@
             label3 = new Label();
             label4 = new Label();
             button1 = new Button();
-            textBoxPhoneNum = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -57,7 +57,7 @@
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(669, 533);
+            panel1.Size = new Size(648, 530);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
@@ -74,6 +74,7 @@
             button3.TabIndex = 20;
             button3.Text = "Cancel";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -88,6 +89,7 @@
             button2.TabIndex = 9;
             button2.Text = "Update Teacher";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // panel2
             // 
@@ -99,8 +101,19 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(190, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(479, 289);
+            panel2.Size = new Size(458, 289);
             panel2.TabIndex = 19;
+            // 
+            // textBoxPhoneNum
+            // 
+            textBoxPhoneNum.BackColor = Color.FromArgb(254, 215, 170);
+            textBoxPhoneNum.BorderStyle = BorderStyle.None;
+            textBoxPhoneNum.Dock = DockStyle.Top;
+            textBoxPhoneNum.Font = new Font("Segoe UI", 18F);
+            textBoxPhoneNum.Location = new Point(0, 134);
+            textBoxPhoneNum.Name = "textBoxPhoneNum";
+            textBoxPhoneNum.Size = new Size(458, 32);
+            textBoxPhoneNum.TabIndex = 4;
             // 
             // textBoxSubject
             // 
@@ -110,7 +123,7 @@
             textBoxSubject.Font = new Font("Segoe UI", 18F);
             textBoxSubject.Location = new Point(0, 102);
             textBoxSubject.Name = "textBoxSubject";
-            textBoxSubject.Size = new Size(479, 32);
+            textBoxSubject.Size = new Size(458, 32);
             textBoxSubject.TabIndex = 3;
             // 
             // textBoxLastName
@@ -121,7 +134,7 @@
             textBoxLastName.Font = new Font("Segoe UI", 18F);
             textBoxLastName.Location = new Point(0, 70);
             textBoxLastName.Name = "textBoxLastName";
-            textBoxLastName.Size = new Size(479, 32);
+            textBoxLastName.Size = new Size(458, 32);
             textBoxLastName.TabIndex = 2;
             // 
             // textBoxFirstName
@@ -132,7 +145,7 @@
             textBoxFirstName.Font = new Font("Segoe UI", 18F);
             textBoxFirstName.Location = new Point(0, 38);
             textBoxFirstName.Name = "textBoxFirstName";
-            textBoxFirstName.Size = new Size(479, 32);
+            textBoxFirstName.Size = new Size(458, 32);
             textBoxFirstName.TabIndex = 1;
             // 
             // comboBoxStudents
@@ -143,8 +156,9 @@
             comboBoxStudents.FormattingEnabled = true;
             comboBoxStudents.Location = new Point(0, 0);
             comboBoxStudents.Name = "comboBoxStudents";
-            comboBoxStudents.Size = new Size(479, 38);
+            comboBoxStudents.Size = new Size(458, 38);
             comboBoxStudents.TabIndex = 0;
+            comboBoxStudents.SelectedIndexChanged += comboBoxStudents_SelectedIndexChanged;
             // 
             // flowLayoutPanel1
             // 
@@ -157,7 +171,7 @@
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(190, 533);
+            flowLayoutPanel1.Size = new Size(190, 530);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label8
@@ -167,9 +181,9 @@
             label8.ForeColor = Color.FromArgb(67, 20, 7);
             label8.Location = new Point(3, 0);
             label8.Name = "label8";
-            label8.Size = new Size(180, 32);
+            label8.Size = new Size(179, 32);
             label8.TabIndex = 15;
-            label8.Text = "Select Student :";
+            label8.Text = "Select Teacher :";
             // 
             // label1
             // 
@@ -215,6 +229,7 @@
             label4.Size = new Size(182, 32);
             label4.TabIndex = 6;
             label4.Text = "Phone Number:";
+            label4.Click += label4_Click;
             // 
             // button1
             // 
@@ -225,17 +240,6 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // textBoxPhoneNum
-            // 
-            textBoxPhoneNum.BackColor = Color.FromArgb(254, 215, 170);
-            textBoxPhoneNum.BorderStyle = BorderStyle.None;
-            textBoxPhoneNum.Dock = DockStyle.Top;
-            textBoxPhoneNum.Font = new Font("Segoe UI", 18F);
-            textBoxPhoneNum.Location = new Point(0, 134);
-            textBoxPhoneNum.Name = "textBoxPhoneNum";
-            textBoxPhoneNum.Size = new Size(479, 32);
-            textBoxPhoneNum.TabIndex = 4;
-            // 
             // AddAcademicStaff
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -243,6 +247,7 @@
             Controls.Add(panel1);
             Name = "AddAcademicStaff";
             Size = new Size(661, 533);
+            Load += AddAcademicStaff_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

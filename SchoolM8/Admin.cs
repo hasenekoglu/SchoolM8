@@ -24,7 +24,7 @@ namespace SchoolM8
 
         private void button4_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Admin_Load(object sender, EventArgs e)
@@ -42,6 +42,20 @@ namespace SchoolM8
             panel5.Controls.Clear();
             AddStudentDetails addStudentDetails = new AddStudentDetails();
             panel5.Controls.Add(addStudentDetails);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            AddAcademicStaff addAcademicDetails = new AddAcademicStaff();
+            panel5.Controls.Add(addAcademicDetails);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            AddParentDetails addParentDetails = new AddParentDetails();
+            panel5.Controls.Add(addParentDetails);
         }
     }
 }

@@ -97,6 +97,7 @@
             button3.TabIndex = 4;
             button3.Text = "Add Parent Details";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // panel3
             // 
@@ -165,6 +166,7 @@
             button1.TabIndex = 4;
             button1.Text = "Add Academic Staff Details";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 

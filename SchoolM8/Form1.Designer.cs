@@ -37,7 +37,10 @@
             btnStudent = new Button();
             btnDashboard = new Button();
             panelLogo = new Panel();
+            labelRole = new Label();
+            labelLastName = new Label();
             pictureBox1 = new PictureBox();
+            labelFirstName = new Label();
             panel1 = new Panel();
             panelSideMenu.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -183,13 +186,38 @@
             // 
             // panelLogo
             // 
+            panelLogo.Controls.Add(labelRole);
+            panelLogo.Controls.Add(labelLastName);
             panelLogo.Controls.Add(pictureBox1);
+            panelLogo.Controls.Add(labelFirstName);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(250, 102);
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panel1_Paint_1;
+            // 
+            // labelRole
+            // 
+            labelRole.AutoSize = true;
+            labelRole.Font = new Font("Segoe UI Variable Small", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            labelRole.ForeColor = SystemColors.ButtonHighlight;
+            labelRole.Location = new Point(107, 52);
+            labelRole.Name = "labelRole";
+            labelRole.Size = new Size(41, 17);
+            labelRole.TabIndex = 8;
+            labelRole.Text = "NULL";
+            // 
+            // labelLastName
+            // 
+            labelLastName.AutoSize = true;
+            labelLastName.Font = new Font("Segoe UI Variable Small", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            labelLastName.ForeColor = SystemColors.ButtonHighlight;
+            labelLastName.Location = new Point(107, 35);
+            labelLastName.Name = "labelLastName";
+            labelLastName.Size = new Size(41, 17);
+            labelLastName.TabIndex = 7;
+            labelLastName.Text = "NULL";
             // 
             // pictureBox1
             // 
@@ -202,6 +230,18 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click_1;
+            // 
+            // labelFirstName
+            // 
+            labelFirstName.AutoSize = true;
+            labelFirstName.Font = new Font("Segoe UI Variable Small", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            labelFirstName.ForeColor = SystemColors.ButtonHighlight;
+            labelFirstName.Location = new Point(107, 18);
+            labelFirstName.Name = "labelFirstName";
+            labelFirstName.Size = new Size(41, 17);
+            labelFirstName.TabIndex = 6;
+            labelFirstName.Text = "NULL";
+            labelFirstName.Click += labelFirstName_Click;
             // 
             // panel1
             // 
@@ -229,6 +269,7 @@
             Load += Form1_Load;
             panelSideMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
+            panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -245,5 +286,8 @@
         private Button btnParent;
         private PictureBox pictureBox1;
         private Panel panel1;
+        private Label labelFirstName;
+        private Label labelLastName;
+        private Label labelRole;
     }
 }
