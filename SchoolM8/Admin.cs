@@ -24,7 +24,24 @@ namespace SchoolM8
 
         private void button4_Click(object sender, EventArgs e)
         {
+          
+        }
 
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            AddStudentDetails addStudentDetails = new AddStudentDetails();
+            panel5.Controls.Add(addStudentDetails);
         }
     }
 }
