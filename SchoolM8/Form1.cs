@@ -19,19 +19,33 @@ namespace SchoolM8
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Dashboard dashboard = new Dashboard();
-            panel1.Controls.Add(dashboard);
+           
+          
+                panel1.Controls.Clear();
+                Dashboard dashboard = new Dashboard();
+                panel1.Controls.Add(dashboard);
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (UserSession.Instance.Role == "Student"||UserSession.Instance.Role == "Admin")
+            {
+                panel1.Controls.Clear();
+                Students students = new Students();
+                panel1.Controls.Add(students);
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this page.");
 
-            panel1.Controls.Clear();
-            Students students = new Students();
-            panel1.Controls.Add(students);
+            }
+
         }
-
+        //Admin
+        // Teacher
+        // Student
+        // Parent
         private void btnCanteen_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -41,9 +55,16 @@ namespace SchoolM8
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Admin admin = new Admin();
-            panel1.Controls.Add(admin);
+            if (UserSession.Instance.Role == "Admin")
+            {
+                panel1.Controls.Clear();
+                Admin admin = new Admin();
+                panel1.Controls.Add(admin);
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this page.");
+            }
         }
 
 
@@ -64,16 +85,30 @@ namespace SchoolM8
 
         private void btnAcademicStaff_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            if (UserSession.Instance.Role == "Teacher"||UserSession.Instance.Role == "Admin"){
+                panel1.Controls.Clear();
             AcademicStaff academicStaff = new AcademicStaff();
             panel1.Controls.Add(academicStaff);
+
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this page.");
+            }
         }
 
         private void btnParent_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Parent parent = new Parent();
-            panel1.Controls.Add(parent);
+            if (UserSession.Instance.Role == "Parent"||UserSession.Instance.Role == "Admin")
+            {
+                panel1.Controls.Clear();
+                Parent parent = new Parent();
+                panel1.Controls.Add(parent);
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this page.");
+            }
         }
 
        

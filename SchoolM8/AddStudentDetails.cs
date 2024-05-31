@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolM8
 {
-    public partial class Admin : UserControl
+    public partial class AddStudentDetails : UserControl
     {
-        public Admin()
+        public AddStudentDetails()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

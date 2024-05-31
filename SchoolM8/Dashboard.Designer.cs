@@ -51,6 +51,7 @@
             Controls.Add(pictureBox2);
             Name = "Dashboard";
             Size = new Size(661, 533);
+            Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();

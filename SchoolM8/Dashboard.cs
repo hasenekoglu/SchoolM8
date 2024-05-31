@@ -21,5 +21,17 @@ namespace SchoolM8
         {
 
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            //if (UserSession.Instance.Role != "Teacher")
+            //{
+            //    MessageBox.Show("You do not have permission to access this page.");
+                
+            //    return;
+            //}
+            //Form1 form = new Form1();
+            //form.Show();
+        }
     }
 }
