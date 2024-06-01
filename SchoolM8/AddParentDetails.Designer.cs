@@ -55,9 +55,10 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(flowLayoutPanel1);
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(658, 496);
+            panel1.Size = new Size(661, 533);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
@@ -101,7 +102,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(190, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(468, 289);
+            panel2.Size = new Size(471, 289);
             panel2.TabIndex = 19;
             // 
             // textBoxPhoneNum
@@ -112,7 +113,7 @@
             textBoxPhoneNum.Font = new Font("Segoe UI", 18F);
             textBoxPhoneNum.Location = new Point(0, 134);
             textBoxPhoneNum.Name = "textBoxPhoneNum";
-            textBoxPhoneNum.Size = new Size(468, 32);
+            textBoxPhoneNum.Size = new Size(471, 32);
             textBoxPhoneNum.TabIndex = 4;
             // 
             // textBoxOccupation
@@ -123,7 +124,7 @@
             textBoxOccupation.Font = new Font("Segoe UI", 18F);
             textBoxOccupation.Location = new Point(0, 102);
             textBoxOccupation.Name = "textBoxOccupation";
-            textBoxOccupation.Size = new Size(468, 32);
+            textBoxOccupation.Size = new Size(471, 32);
             textBoxOccupation.TabIndex = 3;
             // 
             // textBoxLastName
@@ -134,7 +135,7 @@
             textBoxLastName.Font = new Font("Segoe UI", 18F);
             textBoxLastName.Location = new Point(0, 70);
             textBoxLastName.Name = "textBoxLastName";
-            textBoxLastName.Size = new Size(468, 32);
+            textBoxLastName.Size = new Size(471, 32);
             textBoxLastName.TabIndex = 2;
             // 
             // textBoxFirstName
@@ -145,8 +146,9 @@
             textBoxFirstName.Font = new Font("Segoe UI", 18F);
             textBoxFirstName.Location = new Point(0, 38);
             textBoxFirstName.Name = "textBoxFirstName";
-            textBoxFirstName.Size = new Size(468, 32);
+            textBoxFirstName.Size = new Size(471, 32);
             textBoxFirstName.TabIndex = 1;
+            textBoxFirstName.TextChanged += textBoxFirstName_TextChanged;
             // 
             // comboBoxStudents
             // 
@@ -156,7 +158,7 @@
             comboBoxStudents.FormattingEnabled = true;
             comboBoxStudents.Location = new Point(0, 0);
             comboBoxStudents.Name = "comboBoxStudents";
-            comboBoxStudents.Size = new Size(468, 38);
+            comboBoxStudents.Size = new Size(471, 38);
             comboBoxStudents.TabIndex = 0;
             comboBoxStudents.SelectedIndexChanged += comboBoxStudents_SelectedIndexChanged;
             // 
@@ -171,7 +173,7 @@
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(190, 496);
+            flowLayoutPanel1.Size = new Size(190, 533);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label8

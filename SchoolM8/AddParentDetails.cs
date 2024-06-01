@@ -135,5 +135,10 @@ namespace SchoolM8
             Admin admin = new Admin();
             panel1.Controls.Add(admin);
         }
+
+        private void textBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

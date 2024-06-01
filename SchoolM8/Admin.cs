@@ -57,5 +57,12 @@ namespace SchoolM8
             AddParentDetails addParentDetails = new AddParentDetails();
             panel5.Controls.Add(addParentDetails);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            AddCanteenDetails addCanteenDetails = new AddCanteenDetails();
+            panel5.Controls.Add(addCanteenDetails);
+        }
     }
 }

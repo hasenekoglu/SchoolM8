@@ -46,7 +46,9 @@ namespace SchoolM8
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            panel1.Controls.Clear();
+            StudentAttendance studentAttendance = new StudentAttendance();
+            panel1.Controls.Add(studentAttendance);
         }
 
 

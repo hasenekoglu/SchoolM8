@@ -38,6 +38,8 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.FromArgb(249, 115, 22);
             dataGridView1.BorderStyle = BorderStyle.None;
@@ -62,6 +64,7 @@
             dataGridView1.GridColor = Color.FromArgb(249, 115, 22);
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(253, 186, 116);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);

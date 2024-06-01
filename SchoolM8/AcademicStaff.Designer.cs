@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            labelPhoneNumber = new Label();
             labelEmail = new Label();
             labelSubject = new Label();
             labelLastName = new Label();
@@ -42,7 +43,6 @@
             label5 = new Label();
             button1 = new Button();
             label3 = new Label();
-            labelPhoneNumber = new Label();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -57,16 +57,27 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Location = new Point(42, 39);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(576, 472);
+            panel1.Size = new Size(661, 533);
             panel1.TabIndex = 1;
+            // 
+            // labelPhoneNumber
+            // 
+            labelPhoneNumber.AutoSize = true;
+            labelPhoneNumber.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            labelPhoneNumber.Location = new Point(291, 195);
+            labelPhoneNumber.Name = "labelPhoneNumber";
+            labelPhoneNumber.Size = new Size(70, 32);
+            labelPhoneNumber.TabIndex = 8;
+            labelPhoneNumber.Text = "NULL";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelEmail.Location = new Point(221, 99);
+            labelEmail.Location = new Point(291, 163);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(70, 32);
             labelEmail.TabIndex = 7;
@@ -76,7 +87,7 @@
             // 
             labelSubject.AutoSize = true;
             labelSubject.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelSubject.Location = new Point(221, 67);
+            labelSubject.Location = new Point(291, 131);
             labelSubject.Name = "labelSubject";
             labelSubject.Size = new Size(70, 32);
             labelSubject.TabIndex = 6;
@@ -86,7 +97,7 @@
             // 
             labelLastName.AutoSize = true;
             labelLastName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelLastName.Location = new Point(221, 35);
+            labelLastName.Location = new Point(291, 99);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(70, 32);
             labelLastName.TabIndex = 5;
@@ -96,7 +107,7 @@
             // 
             labelFirstName.AutoSize = true;
             labelFirstName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelFirstName.Location = new Point(221, 3);
+            labelFirstName.Location = new Point(291, 67);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(70, 32);
             labelFirstName.TabIndex = 4;
@@ -109,7 +120,7 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(14, 380);
+            button3.Location = new Point(53, 380);
             button3.Name = "button3";
             button3.Size = new Size(254, 52);
             button3.TabIndex = 3;
@@ -123,7 +134,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(309, 380);
+            button2.Location = new Point(338, 380);
             button2.Name = "button2";
             button2.Size = new Size(254, 52);
             button2.TabIndex = 2;
@@ -138,9 +149,9 @@
             flowLayoutPanel1.Controls.Add(label5);
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Controls.Add(label3);
-            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Location = new Point(65, 67);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(203, 221);
+            flowLayoutPanel1.Size = new Size(203, 176);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -208,16 +219,6 @@
             label3.Size = new Size(189, 32);
             label3.TabIndex = 15;
             label3.Text = "Phone Number :";
-            // 
-            // labelPhoneNumber
-            // 
-            labelPhoneNumber.AutoSize = true;
-            labelPhoneNumber.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            labelPhoneNumber.Location = new Point(221, 131);
-            labelPhoneNumber.Name = "labelPhoneNumber";
-            labelPhoneNumber.Size = new Size(70, 32);
-            labelPhoneNumber.TabIndex = 8;
-            labelPhoneNumber.Text = "NULL";
             // 
             // AcademicStaff
             // 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -39,7 +38,6 @@
             txtPassword = new TextBox();
             label2 = new Label();
             txtEmail = new TextBox();
-            contextMenuStrip1 = new ContextMenuStrip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -168,11 +166,6 @@
             txtEmail.TabIndex = 0;
             txtEmail.TextChanged += txtEmail_TextChanged;
             // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            // 
             // M8School
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -202,7 +195,6 @@
         private Panel panel2;
         private Label label2;
         private TextBox txtEmail;
-        private ContextMenuStrip contextMenuStrip1;
         private Button btnSignUp;
         private Button btnSignIn;
         private Label label3;

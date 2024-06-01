@@ -68,7 +68,7 @@
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(172, 490);
+            flowLayoutPanel1.Size = new Size(172, 533);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -185,9 +185,10 @@
             panel1.Controls.Add(TimeTable);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Location = new Point(35, 18);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(576, 490);
+            panel1.Size = new Size(661, 533);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
