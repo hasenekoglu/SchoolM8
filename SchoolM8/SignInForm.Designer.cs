@@ -93,6 +93,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(344, 388);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
             // btnSignUp
             // 
@@ -142,6 +143,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(235, 43);
             txtPassword.TabIndex = 2;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label2
             // 

@@ -59,9 +59,10 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(flowLayoutPanel1);
-            panel1.Location = new Point(42, 21);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(576, 490);
+            panel1.Size = new Size(661, 533);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
@@ -114,6 +115,7 @@
             lbFirstName.Size = new Size(70, 32);
             lbFirstName.TabIndex = 5;
             lbFirstName.Text = "NULL";
+            lbFirstName.Click += lbFirstName_Click;
             // 
             // button4
             // 
@@ -128,6 +130,7 @@
             button4.TabIndex = 4;
             button4.Text = "View Student's ";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -142,6 +145,7 @@
             button3.TabIndex = 3;
             button3.Text = "Add Balance";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -156,6 +160,7 @@
             button2.TabIndex = 2;
             button2.Text = "Restrict";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // flowLayoutPanel1
             // 

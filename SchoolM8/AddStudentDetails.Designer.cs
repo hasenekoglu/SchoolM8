@@ -230,6 +230,7 @@
             label8.Size = new Size(180, 32);
             label8.TabIndex = 15;
             label8.Text = "Select Student :";
+            label8.Click += label8_Click;
             // 
             // label1
             // 

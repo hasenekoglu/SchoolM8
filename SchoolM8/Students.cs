@@ -36,7 +36,9 @@ namespace SchoolM8
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            panel1.Controls.Clear();
+            CafeteriaForm cafeteriaForm = new CafeteriaForm();
+            panel1.Controls.Add(cafeteriaForm);
         }
 
         private void button2_Click(object sender, EventArgs e)

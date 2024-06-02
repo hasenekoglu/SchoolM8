@@ -146,5 +146,10 @@ namespace SchoolM8
         {
 
         }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '*';
+        }
     }
 }

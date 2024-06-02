@@ -18,7 +18,7 @@ namespace SchoolM8
             InitializeComponent();
         }
 
-        private SqlConnection connect = 
+        private SqlConnection connect =
             new SqlConnection
                 (@"Data Source=HASENEK;Initial Catalog=SchoolM8DB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
 
@@ -42,6 +42,32 @@ namespace SchoolM8
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AddBalance addBalance = new AddBalance();
+            panel1.Controls.Add(addBalance);
+        }
+
+        private void lbFirstName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ViewStudent viewStudent = new ViewStudent();
+            panel1.Controls.Add(viewStudent);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Restrict restrict = new Restrict();
+            panel1.Controls.Add(restrict);
         }
     }
 }

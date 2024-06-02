@@ -255,6 +255,7 @@
             Controls.Add(panel1);
             Name = "SignUpForm";
             Text = "<";
+            Load += SignUpForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);

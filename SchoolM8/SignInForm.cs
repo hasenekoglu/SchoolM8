@@ -28,7 +28,7 @@ namespace SchoolM8
 
         private void M8School_Load(object sender, EventArgs e)
         {
-
+            txtPassword.PasswordChar = '*';
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -67,12 +67,12 @@ namespace SchoolM8
 
                     // Save the user details in the UserSession singleton
                     LoadUserInfo(userId);
-                     LoadRoleSpecificInfo(firstName, lastName, role);
+                    LoadRoleSpecificInfo(firstName, lastName, role);
                     // Redirect to the appropriate form based on the role
 
 
                     Form nextForm = new Form1();
-                    nextForm.FormClosed += (s, args) => this.Show(); 
+                    nextForm.FormClosed += (s, args) => this.Show();
                     nextForm.Show();
                     this.Hide();
                 }
@@ -80,7 +80,7 @@ namespace SchoolM8
                 {
                     MessageBox.Show("Invalid email or password.");
                 }
-             
+
 
             }
         }
@@ -154,8 +154,8 @@ namespace SchoolM8
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             SignUpForm signUpForm = new SignUpForm();
-           signUpForm.FormClosed += (s, args) => this.Show();
-          signUpForm.Show();
+            signUpForm.FormClosed += (s, args) => this.Show();
+            signUpForm.Show();
             this.Hide();
         }
 
@@ -169,17 +169,27 @@ namespace SchoolM8
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
-                { 
-                  //  object userID = reader["UserId"];
-                    string firstName = reader["FirstName"] as string ?? string.Empty; 
-                   string lastName = reader["LastName"] as string ?? string.Empty;
-                   string email= reader["Email"] as string ?? string.Empty;
+                {
+                    //  object userID = reader["UserId"];
+                    string firstName = reader["FirstName"] as string ?? string.Empty;
+                    string lastName = reader["LastName"] as string ?? string.Empty;
+                    string email = reader["Email"] as string ?? string.Empty;
                     string role = reader["Roles"] as string ?? string.Empty;
 
-                   UserSession.Instance.SetUser(userId,email,role,firstName,lastName);
-                    
+                    UserSession.Instance.SetUser(userId, email, role, firstName, lastName);
+
                 }
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

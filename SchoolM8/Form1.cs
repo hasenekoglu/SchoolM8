@@ -75,12 +75,12 @@ namespace SchoolM8
 
         private void Form1_Load(object sender, EventArgs e)
         {
-       string firstName = UserSession.Instance.FirstName;
-       string lastName = UserSession.Instance.LastName;
-       string role = UserSession.Instance.Role;
-       labelFirstName.Text = firstName;
-       labelLastName.Text = lastName;
-       labelRole.Text = role;
+            string firstName = UserSession.Instance.FirstName;
+            string lastName = UserSession.Instance.LastName;
+            string role = UserSession.Instance.Role;
+            labelFirstName.Text = firstName;
+            labelLastName.Text = lastName;
+            labelRole.Text = role;
         }
 
         private void panel1_Paint_2(object sender, PaintEventArgs e)
@@ -120,6 +120,15 @@ namespace SchoolM8
         private void labelFirstName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Form nextForm = new M8School();
+            nextForm.FormClosed += (s, args) => this.Show();
+            nextForm.Show();
+            this.Hide();
         }
     }
 }
