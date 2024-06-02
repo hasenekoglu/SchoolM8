@@ -145,6 +145,18 @@ namespace SchoolM8
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            EditClasses editClasses = new EditClasses();
+            panel1.Controls.Add(editClasses);
+        }
     }
 
 }

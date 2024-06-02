@@ -33,7 +33,10 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -60,9 +63,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.FromArgb(249, 115, 22);
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(38, 73);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
@@ -81,24 +83,50 @@
             dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Black;
             dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.White;
-            dataGridView1.Size = new Size(661, 533);
+            dataGridView1.Size = new Size(593, 432);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(661, 533);
+            panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label3.ForeColor = Color.FromArgb(67, 20, 7);
+            label3.Location = new Point(38, 30);
+            label3.Name = "label3";
+            label3.Size = new Size(318, 40);
+            label3.TabIndex = 5;
+            label3.Text = "The Canteen Products";
             // 
             // Canteen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             Name = "Canteen";
             Size = new Size(661, 533);
             Load += Canteen_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private DataGridView dataGridView1;
+        private Panel panel1;
+        private Label label3;
     }
 }

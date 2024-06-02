@@ -37,6 +37,7 @@
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            label2 = new Label();
             label1 = new Label();
             restrictedItemsGridView = new DataGridView();
             button1 = new Button();
@@ -45,6 +46,8 @@
             txtBalance = new Label();
             txtStudentName = new Label();
             purchaseButton = new Button();
+            lblPrice = new Label();
+            lblStock = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)restrictedItemsGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)studentPurchasesGridView).BeginInit();
@@ -52,6 +55,9 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblStock);
+            panel1.Controls.Add(lblPrice);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(restrictedItemsGridView);
             panel1.Controls.Add(button1);
@@ -66,6 +72,16 @@
             panel1.Size = new Size(661, 533);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label2.Location = new Point(19, 333);
+            label2.Name = "label2";
+            label2.Size = new Size(198, 32);
+            label2.TabIndex = 15;
+            label2.Text = "Purchase History";
             // 
             // label1
             // 
@@ -132,7 +148,7 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(226, 369);
+            button1.Location = new Point(226, 264);
             button1.Name = "button1";
             button1.Size = new Size(205, 52);
             button1.TabIndex = 12;
@@ -165,7 +181,7 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             studentPurchasesGridView.DefaultCellStyle = dataGridViewCellStyle6;
             studentPurchasesGridView.GridColor = Color.FromArgb(249, 115, 22);
-            studentPurchasesGridView.Location = new Point(19, 427);
+            studentPurchasesGridView.Location = new Point(19, 368);
             studentPurchasesGridView.Name = "studentPurchasesGridView";
             studentPurchasesGridView.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
@@ -184,8 +200,9 @@
             studentPurchasesGridView.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
             studentPurchasesGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Black;
             studentPurchasesGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.White;
-            studentPurchasesGridView.Size = new Size(624, 87);
+            studentPurchasesGridView.Size = new Size(624, 146);
             studentPurchasesGridView.TabIndex = 11;
+            studentPurchasesGridView.CellContentClick += studentPurchasesGridView_CellContentClick;
             // 
             // itemComboBox
             // 
@@ -224,13 +241,33 @@
             purchaseButton.FlatAppearance.BorderSize = 0;
             purchaseButton.FlatStyle = FlatStyle.Flat;
             purchaseButton.ForeColor = Color.White;
-            purchaseButton.Location = new Point(437, 369);
+            purchaseButton.Location = new Point(437, 264);
             purchaseButton.Name = "purchaseButton";
             purchaseButton.Size = new Size(206, 52);
             purchaseButton.TabIndex = 3;
             purchaseButton.Text = "Purchase";
             purchaseButton.UseVisualStyleBackColor = false;
             purchaseButton.Click += purchaseButton_Click_1;
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Segoe UI", 14.25F);
+            lblPrice.Location = new Point(19, 248);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(57, 25);
+            lblPrice.TabIndex = 16;
+            lblPrice.Text = "NULL";
+            // 
+            // lblStock
+            // 
+            lblStock.AutoSize = true;
+            lblStock.Font = new Font("Segoe UI", 14.25F);
+            lblStock.Location = new Point(19, 280);
+            lblStock.Name = "lblStock";
+            lblStock.Size = new Size(57, 25);
+            lblStock.TabIndex = 17;
+            lblStock.Text = "NULL";
             // 
             // CafeteriaForm
             // 
@@ -258,5 +295,8 @@
         private Button button1;
         private Label label1;
         private DataGridView restrictedItemsGridView;
+        private Label label2;
+        private Label lblStock;
+        private Label lblPrice;
     }
 }

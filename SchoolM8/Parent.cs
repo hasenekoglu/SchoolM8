@@ -69,5 +69,19 @@ namespace SchoolM8
             Restrict restrict = new Restrict();
             panel1.Controls.Add(restrict);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            PurchaseHistory purchaseHistory = new PurchaseHistory();
+            panel1.Controls.Add(purchaseHistory);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AttendanceViewer attendanceViewer = new AttendanceViewer();
+            panel1.Controls.Add(attendanceViewer);
+        }
     }
 }

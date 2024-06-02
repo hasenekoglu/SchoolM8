@@ -30,10 +30,24 @@ namespace SchoolM8
 
         private void Canteen_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT  ItemName, Price FROM CafeteriaItems", connectionString);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            try
+            {
+                // Tüm öğe verilerini almak için sorguyu güncelliyoruz
+                string query = "SELECT * FROM CafeteriaItems";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connectionString);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading cafeteria items: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

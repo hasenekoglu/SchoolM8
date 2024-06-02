@@ -30,9 +30,9 @@
         {
             panel1 = new Panel();
             button3 = new Button();
-            button2 = new Button();
             panel2 = new Panel();
             textBoxPhoneNum = new TextBox();
+            button2 = new Button();
             textBoxSubject = new TextBox();
             textBoxLastName = new TextBox();
             textBoxFirstName = new TextBox();
@@ -44,6 +44,7 @@
             label3 = new Label();
             label4 = new Label();
             button1 = new Button();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(panel2);
@@ -68,28 +70,13 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(190, 400);
+            button3.Location = new Point(253, 475);
             button3.Name = "button3";
             button3.Size = new Size(193, 52);
             button3.TabIndex = 20;
             button3.Text = "Cancel";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(249, 115, 22);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(412, 400);
-            button2.Name = "button2";
-            button2.Size = new Size(193, 52);
-            button2.TabIndex = 9;
-            button2.Text = "Update Teacher";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // panel2
             // 
@@ -101,8 +88,9 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(190, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(458, 289);
+            panel2.Size = new Size(458, 263);
             panel2.TabIndex = 19;
+            panel2.Paint += panel2_Paint;
             // 
             // textBoxPhoneNum
             // 
@@ -114,6 +102,21 @@
             textBoxPhoneNum.Name = "textBoxPhoneNum";
             textBoxPhoneNum.Size = new Size(458, 32);
             textBoxPhoneNum.TabIndex = 4;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(249, 115, 22);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(452, 475);
+            button2.Name = "button2";
+            button2.Size = new Size(193, 52);
+            button2.TabIndex = 9;
+            button2.Text = "Update Teacher";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBoxSubject
             // 
@@ -240,6 +243,21 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(249, 115, 22);
+            button4.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(354, 417);
+            button4.Name = "button4";
+            button4.Size = new Size(193, 52);
+            button4.TabIndex = 21;
+            button4.Text = "Edit Class";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // AddAcademicStaff
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -281,5 +299,7 @@
         private Label label6;
         private Label label7;
         private TextBox textBoxPhoneNum;
+        private ComboBox comboBoxClasses;
+        private Button button4;
     }
 }

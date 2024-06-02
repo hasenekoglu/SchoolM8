@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button6 = new Button();
+            button5 = new Button();
             lbOccupation = new Label();
             lbEmail = new Label();
             lbPhoneNumber = new Label();
@@ -50,6 +52,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button6);
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(lbOccupation);
             panel1.Controls.Add(lbEmail);
             panel1.Controls.Add(lbPhoneNumber);
@@ -65,6 +69,36 @@
             panel1.Size = new Size(661, 533);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(249, 115, 22);
+            button6.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(167, 346);
+            button6.Name = "button6";
+            button6.Size = new Size(254, 52);
+            button6.TabIndex = 11;
+            button6.Text = "Attendance Viewer";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(249, 115, 22);
+            button5.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(301, 404);
+            button5.Name = "button5";
+            button5.Size = new Size(254, 52);
+            button5.TabIndex = 10;
+            button5.Text = "View Student's Purchase History";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // lbOccupation
             // 
@@ -124,7 +158,7 @@
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.ForeColor = Color.White;
-            button4.Location = new Point(153, 438);
+            button4.Location = new Point(41, 404);
             button4.Name = "button4";
             button4.Size = new Size(254, 52);
             button4.TabIndex = 4;
@@ -139,7 +173,7 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(3, 380);
+            button3.Location = new Point(41, 462);
             button3.Name = "button3";
             button3.Size = new Size(254, 52);
             button3.TabIndex = 3;
@@ -154,7 +188,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(297, 380);
+            button2.Location = new Point(301, 462);
             button2.Name = "button2";
             button2.Size = new Size(254, 52);
             button2.TabIndex = 2;
@@ -272,5 +306,7 @@
         private Label lbEmail;
         private Label lbPhoneNumber;
         private Label lbLastName;
+        private Button button5;
+        private Button button6;
     }
 }
