@@ -55,7 +55,7 @@ namespace SchoolM8
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            if (UserSession.Instance.Role == "Admin")
+            if (UserSession.Instance.Role == "Admin"||UserSession.Instance.Role == "Canteen")
             {
                 panel1.Controls.Clear();
                 Admin admin = new Admin();

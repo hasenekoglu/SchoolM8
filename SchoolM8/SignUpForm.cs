@@ -151,5 +151,10 @@ namespace SchoolM8
         {
             txtPassword.PasswordChar = '*';
         }
+
+        private void comboBoxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

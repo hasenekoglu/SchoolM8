@@ -90,11 +90,12 @@
             comboBoxRole.BackColor = SystemColors.Menu;
             comboBoxRole.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
             comboBoxRole.FormattingEnabled = true;
-            comboBoxRole.Items.AddRange(new object[] { "Admin", "Teacher", "Student", "Parent" });
+            comboBoxRole.Items.AddRange(new object[] { "Admin", "Teacher", "Student", "Parent", "Canteen" });
             comboBoxRole.Location = new Point(23, 421);
             comboBoxRole.Name = "comboBoxRole";
             comboBoxRole.Size = new Size(121, 45);
             comboBoxRole.TabIndex = 14;
+            comboBoxRole.SelectedIndexChanged += comboBoxRole_SelectedIndexChanged;
             // 
             // label6
             // 

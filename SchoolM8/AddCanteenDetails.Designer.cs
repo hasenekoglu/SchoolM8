@@ -39,7 +39,6 @@
             button1 = new Button();
             button2 = new Button();
             label4 = new Label();
-            button3 = new Button();
             panel1 = new Panel();
             button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownStock).BeginInit();
@@ -175,27 +174,11 @@
             label4.TabIndex = 19;
             label4.Text = "Stock :";
             // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(249, 115, 22);
-            button3.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(484, 440);
-            button3.Name = "button3";
-            button3.Size = new Size(160, 52);
-            button3.TabIndex = 20;
-            button3.Text = "Delete Item";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // panel1
             // 
             panel1.Controls.Add(button4);
             panel1.Controls.Add(listBoxItems);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(numericUpDownStock);
             panel1.Controls.Add(textBoxItemName);
@@ -219,7 +202,7 @@
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.ForeColor = Color.White;
-            button4.Location = new Point(307, 440);
+            button4.Location = new Point(491, 449);
             button4.Name = "button4";
             button4.Size = new Size(160, 52);
             button4.TabIndex = 21;
@@ -254,7 +237,6 @@
         private Button button1;
         private Button button2;
         private Label label4;
-        private Button button3;
         private Panel panel1;
         private Button button4;
     }

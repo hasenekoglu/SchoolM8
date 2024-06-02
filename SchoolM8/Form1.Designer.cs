@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelSideMenu = new Panel();
+            button2 = new Button();
             btnAdmin = new Button();
             btnParent = new Button();
             btnCanteen = new Button();
@@ -42,7 +43,6 @@
             pictureBox1 = new PictureBox();
             labelFirstName = new Label();
             panel1 = new Panel();
-            button2 = new Button();
             panelSideMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -65,6 +65,27 @@
             panelSideMenu.Size = new Size(250, 561);
             panelSideMenu.TabIndex = 0;
             panelSideMenu.Paint += panel1_Paint;
+            // 
+            // button2
+            // 
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Dock = DockStyle.Bottom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            button2.ForeColor = Color.Gainsboro;
+            button2.Image = Properties.Resources.pngwing1;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(0, 523);
+            button2.Name = "button2";
+            button2.Padding = new Padding(10, 0, 0, 0);
+            button2.Size = new Size(250, 38);
+            button2.TabIndex = 7;
+            button2.Text = "  Exit";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // btnAdmin
             // 
@@ -252,27 +273,6 @@
             panel1.Size = new Size(661, 533);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint_2;
-            // 
-            // button2
-            // 
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Dock = DockStyle.Bottom;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            button2.ForeColor = Color.Gainsboro;
-            button2.Image = Properties.Resources.pngwing1;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 523);
-            button2.Name = "button2";
-            button2.Padding = new Padding(10, 0, 0, 0);
-            button2.Size = new Size(250, 38);
-            button2.TabIndex = 7;
-            button2.Text = "  Exit";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // Form1
             // 

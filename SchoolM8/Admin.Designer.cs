@@ -41,6 +41,7 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             button4 = new Button();
+            button5 = new Button();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(button5);
             panel5.Controls.Add(panel4);
             panel5.Controls.Add(panel3);
             panel5.Controls.Add(panel2);
@@ -70,7 +72,7 @@
             panel4.BackColor = Color.FromArgb(254, 215, 170);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(button3);
-            panel4.Location = new Point(378, 285);
+            panel4.Location = new Point(342, 240);
             panel4.Name = "panel4";
             panel4.Size = new Size(238, 231);
             panel4.TabIndex = 10;
@@ -104,7 +106,7 @@
             panel3.BackColor = Color.FromArgb(254, 215, 170);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(button2);
-            panel3.Location = new Point(45, 285);
+            panel3.Location = new Point(41, 240);
             panel3.Name = "panel3";
             panel3.Size = new Size(238, 231);
             panel3.TabIndex = 11;
@@ -139,7 +141,7 @@
             panel2.BackColor = Color.FromArgb(254, 215, 170);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(button1);
-            panel2.Location = new Point(378, 16);
+            panel2.Location = new Point(342, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(238, 231);
             panel2.TabIndex = 12;
@@ -174,7 +176,7 @@
             panel1.BackColor = Color.FromArgb(254, 215, 170);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(button4);
-            panel1.Location = new Point(45, 16);
+            panel1.Location = new Point(41, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(238, 231);
             panel1.TabIndex = 9;
@@ -202,6 +204,21 @@
             button4.Text = "Add Student Details";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click_1;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(249, 115, 22);
+            button5.FlatAppearance.BorderColor = Color.FromArgb(249, 115, 22);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(455, 477);
+            button5.Name = "button5";
+            button5.Size = new Size(203, 41);
+            button5.TabIndex = 8;
+            button5.Text = "View All Reports";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // Admin
             // 
@@ -238,5 +255,6 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Button button4;
+        private Button button5;
     }
 }
